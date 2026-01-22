@@ -2,65 +2,156 @@
 <html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
-    <title>Os Meus Projetos Musicais</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solvero - Arquivo Musical</title>
     <style>
+        /* Definições Globais e Tema Escuro */
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-primary: #ffffff;
+            --text-secondary: #b3b3b3;
+            --spotify-green: #1DB954;
+        }
+
         body { 
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; 
-            line-height: 1.6; 
-            padding: 40px; 
-            background-color: #f9f9f9; 
-            color: #333;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color); 
+            color: var(--text-primary);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.5;
         }
-        .content { 
-            max-width: 700px; 
-            margin: auto; 
-            background: white; 
-            padding: 30px; 
-            border-radius: 12px; 
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+        /* Cabeçalho */
+        header {
+            text-align: center;
+            padding: 40px 0 60px;
+            max-width: 800px;
+            margin: 0 auto;
         }
-        h1 { border-bottom: 2px solid #1DB954; padding-bottom: 10px; color: #111; }
-        h2 { color: #1DB954; margin-top: 30px; }
-        .musica { 
-            margin-bottom: 25px; 
-            padding: 15px; 
-            background: #f1f1f1; 
-            border-radius: 8px; 
+
+        h1 { 
+            font-size: 3.5em; 
+            margin: 0; 
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
-        .botao { 
+
+        .creator-credit { 
+            color: var(--text-secondary);
+            font-size: 1.1em;
+            margin-top: 10px;
+            font-weight: 300;
+        }
+
+        /* Grelha de Projetos - É aqui que a magia da escalabilidade acontece */
+        .project-grid {
+            display: grid;
+            /* Cria colunas automaticamente. Mínimo de 280px de largura, máximo o que couber. */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px; /* Espaço entre os cartões */
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 60px;
+        }
+
+        /* Cartão Individual do Projeto */
+        .project-card {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden; /* Garante que a imagem não sai dos cantos arredondados */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Efeito ao passar o rato por cima do cartão */
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        /* Imagem da Capa */
+        .card-image {
+            width: 100%;
+            /* Define uma altura fixa para que todas as capas fiquem alinhadas */
+            height: 280px; 
+            object-fit: cover; /* Garante que a imagem preenche o espaço sem distorcer */
+            border-bottom: 2px solid #333;
+        }
+
+        /* Conteúdo de Texto do Cartão */
+        .card-content {
+            padding: 25px;
+            text-align: center;
+            flex-grow: 1; /* Ocupa o espaço restante */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-name {
+            font-size: 1.8em;
+            margin: 10px 0;
+            color: var(--text-primary);
+        }
+
+        .track-info {
+            color: var(--text-secondary);
+            margin: 5px 0 20px;
+            font-size: 0.95em;
+        }
+
+        /* Botão do Spotify */
+        .spotify-btn {
             display: inline-block; 
-            margin-top: 10px; 
-            padding: 10px 20px; 
-            background-color: #1DB954; 
+            padding: 12px 30px; 
+            background-color: var(--spotify-green); 
             color: white; 
             text-decoration: none; 
-            border-radius: 20px; 
-            font-weight: bold; 
+            border-radius: 30px; 
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            transition: background-color 0.2s, transform 0.1s;
         }
-        .botao:hover { background-color: #1ed760; }
-        p { margin: 5px 0; }
+
+        .spotify-btn:hover { background-color: #1ed760; transform: scale(1.05); }
     </style>
 </head>
 <body>
-    <div class="content">
-        <h1>Catálogo Musical</h1>
 
-        <div class="musica">
-            <h2>Sub-banda 005, Daughter Of The Silent Storm</h2>
-            <p><strong>Canção:</strong> Luna Reign</p>
-            <p>Esta é a quinta música desta formação.</p>
-            <a href="https://open.spotify.com/intl-pt/track/3moXBYrPafKc09iDvKFbic?si=df637d0fd3a44a53" target="_blank" class="botao">Ouvir no Spotify</a>
-        </div>
+    <header>
+        <h1>SOLVERO</h1>
+        <div class="creator-credit">Arquivo Musical criado por André M. Fernandes</div>
+    </header>
 
-        <hr>
+    <main class="project-grid">
 
-        <div class="musica">
-            <h2>Sub-banda Echo Vixen</h2>
-            <p><strong>Álbum:</strong> Atrás do Palco II</p>
-            <p><strong>Canção:</strong> 001, Atrás do Palco</p>
-            <p>Esta é a primeira música do segundo álbum.</p>
-            <a href="https://open.spotify.com/intl-pt/track/0MVns61zt5ZdaAMCWFpWSg?si=2a3323dafafd4eaa" target="_blank" class="botao">Ouvir no Spotify</a>
-        </div>
-    </div>
+        <article class="project-card">
+            <img src="https://8upload.com/image/59dd0b5579ca888d/Capa.png" alt="Capa Luna Reign" class="card-image">
+            <div class="card-content">
+                <div>
+                    <h2 class="project-name">Luna Reign</h2>
+                    <p class="track-info">Música: Daughter Of The Silent Storm</p>
+                </div>
+                <a href="https://open.spotify.com/intl-pt/track/3moXBYrPafKc09iDvKFbic?si=df637d0fd3a44a53" target="_blank" class="spotify-btn">Ouvir no Spotify</a>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <img src="https://8upload.com/image/3f2c55bec3730b66/Capa2.jpg" alt="Capa Atrás do Palco II" class="card-image">
+            <div class="card-content">
+                <div>
+                    <h2 class="project-name">Echo Vixen</h2>
+                    <p class="track-info">Álbum: Atrás do Palco II<br>Música: Atrás do Palco</p>
+                </div>
+                <a href="https://open.spotify.com/intl-pt/track/0MVns61zt5ZdaAMCWFpWSg?si=2a3323dafafd4eaa" target="_blank" class="spotify-btn">Ouvir no Spotify</a>
+            </div>
+        </article>
+
+        </main>
+
 </body>
 </html>
