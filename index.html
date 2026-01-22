@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solvero - Arquivo Musical</title>
     <style>
-        /* Definições Globais e Tema Escuro */
         :root {
             --bg-color: #121212;
             --card-bg: #1e1e1e;
@@ -15,7 +14,7 @@
         }
 
         body { 
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg-color); 
             color: var(--text-primary);
             margin: 0;
@@ -23,7 +22,6 @@
             line-height: 1.5;
         }
 
-        /* Cabeçalho */
         header {
             text-align: center;
             padding: 40px 0 60px;
@@ -45,55 +43,57 @@
             font-weight: 300;
         }
 
-        /* Grelha de Projetos - É aqui que a magia da escalabilidade acontece */
         .project-grid {
             display: grid;
-            /* Cria colunas automaticamente. Mínimo de 280px de largura, máximo o que couber. */
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px; /* Espaço entre os cartões */
+            gap: 40px;
             max-width: 1200px;
             margin: 0 auto;
             padding-bottom: 60px;
         }
 
-        /* Cartão Individual do Projeto */
         .project-card {
             background-color: var(--card-bg);
             border-radius: 16px;
-            overflow: hidden; /* Garante que a imagem não sai dos cantos arredondados */
+            overflow: hidden;
             box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease;
             display: flex;
             flex-direction: column;
         }
 
-        /* Efeito ao passar o rato por cima do cartão */
         .project-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
         }
 
-        /* Imagem da Capa */
-        .card-image {
+        /* Contentor da imagem para evitar cortes */
+        .image-container {
             width: 100%;
-            /* Define uma altura fixa para que todas as capas fiquem alinhadas */
-            height: 280px; 
-            object-fit: cover; /* Garante que a imagem preenche o espaço sem distorcer */
+            height: 250px;
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             border-bottom: 2px solid #333;
         }
 
-        /* Conteúdo de Texto do Cartão */
+        .card-image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; /* Garante que a imagem nunca é cortada */
+        }
+
         .card-content {
             padding: 25px;
             text-align: center;
-            flex-grow: 1; /* Ocupa o espaço restante */
+            flex-grow: 1;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
 
         .project-name {
-            font-size: 1.8em;
+            font-size: 1.6em;
             margin: 10px 0;
             color: var(--text-primary);
         }
@@ -104,7 +104,6 @@
             font-size: 0.95em;
         }
 
-        /* Botão do Spotify */
         .spotify-btn {
             display: inline-block; 
             padding: 12px 30px; 
@@ -114,10 +113,9 @@
             border-radius: 30px; 
             font-weight: 700;
             letter-spacing: 0.5px;
-            transition: background-color 0.2s, transform 0.1s;
         }
 
-        .spotify-btn:hover { background-color: #1ed760; transform: scale(1.05); }
+        .spotify-btn:hover { background-color: #1ed760; }
     </style>
 </head>
 <body>
@@ -130,7 +128,9 @@
     <main class="project-grid">
 
         <article class="project-card">
-            <img src="https://8upload.com/image/59dd0b5579ca888d/Capa.png" alt="Capa Luna Reign" class="card-image">
+            <div class="image-container">
+                <img src="https://8upload.com/image/59dd0b5579ca888d/Capa.png" alt="Capa Luna Reign" class="card-image">
+            </div>
             <div class="card-content">
                 <div>
                     <h2 class="project-name">Luna Reign</h2>
@@ -141,7 +141,9 @@
         </article>
 
         <article class="project-card">
-            <img src="https://8upload.com/image/3f2c55bec3730b66/Capa2.jpg" alt="Capa Atrás do Palco II" class="card-image">
+            <div class="image-container">
+                <img src="https://8upload.com/image/3f2c55bec3730b66/Capa2.jpg" alt="Capa Echo Vixen" class="card-image">
+            </div>
             <div class="card-content">
                 <div>
                     <h2 class="project-name">Echo Vixen</h2>
@@ -151,7 +153,33 @@
             </div>
         </article>
 
-        </main>
+        <article class="project-card">
+            <div class="image-container">
+                <img src="https://8upload.com/image/0579a0653e705614/Imagem_PNG.png" alt="Capa Atlântico Lusitano" class="card-image">
+            </div>
+            <div class="card-content">
+                <div>
+                    <h2 class="project-name">Atlântico Lusitano</h2>
+                    <p class="track-info">Música: A Tua Obra</p>
+                </div>
+                <a href="https://open.spotify.com/intl-pt/track/32EET5d5xfMRlVtLE9qw2B?si=742955bfa50e49d3" target="_blank" class="spotify-btn">Ouvir no Spotify</a>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <div class="image-container">
+                <img src="https://8upload.com/image/02671fd53f6f5fdd/Capa.png" alt="Capa Aura Do Tempo" class="card-image">
+            </div>
+            <div class="card-content">
+                <div>
+                    <h2 class="project-name">Aura Do Tempo</h2>
+                    <p class="track-info">Música: A Condena Do Silêncio</p>
+                </div>
+                <a href="https://open.spotify.com/intl-pt/track/44wM3BkByEMkXp3IWWpLO8?si=798da94c768842e1" target="_blank" class="spotify-btn">Ouvir no Spotify</a>
+            </div>
+        </article>
+
+    </main>
 
 </body>
 </html>
