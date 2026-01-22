@@ -2,49 +2,68 @@
 <html lang="pt-pt">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>As Minhas Músicas</title>
     <style>
         body {
-            font-family: sans-serif;
-            background: #f4f4f4;
-            padding: 20px;
+            background-color: #121212,
+            color: white,
+            font-family: "Segoe UI", Helvetica, Arial, sans-serif,
+            margin: 0,
+            padding: 40px
         }
-        .seccao-banda {
-            margin-bottom: 40px;
+        h1, h2 {
+            text-align: center,
+            color: #1DB954
         }
-        .grelha-musicas {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
+        .grelha {
+            display: grid,
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)),
+            gap: 25px,
+            max-width: 1200px,
+            margin: 40px auto
         }
-        .cartao-musica {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        .quadrado-musica {
+            background-color: #181818,
+            padding: 20px,
+            border-radius: 12px,
+            border: 1px solid #282828,
+            text-align: center
         }
-        .cartao-musica h3 {
-            margin-top: 0;
+        .info-musica h3 {
+            margin: 10px 0 5px 0,
+            font-size: 1.2em
         }
-        .data-lancamento {
-            color: #666;
-            font-size: 0.9em;
-            margin-bottom: 10px;
+        .data {
+            color: #b3b3b3,
+            font-size: 0.85em,
+            margin-bottom: 15px
         }
     </style>
 </head>
 <body>
 
-    <div class="seccao-banda">
-        <h2>Nome da Banda Principal</h2>
-        <div class="grelha-musicas">
-            <div class="cartao-musica">
-                <h3>Nome da Música</h3>
-                <p class="data-lancamento">Lançado em: 22 de Janeiro de 2026</p>
-                <div id="reprodutor-exemplo"></div>
+    <h1>Portfólio Musical</h1>
+
+    <section>
+        <h2>Luna Reign</h2>
+        <div class="grelha">
+            <div class="quadrado-musica">
+                <div class="info-musica">
+                    <h3>Nome da Música</h3>
+                    <p class="data">Lançado em: 22 de Janeiro de 2026</p>
+                </div>
+                <iframe 
+                    style="border-radius:12px" 
+                    src="https://open.spotify.com/embed/track/COLOCA_AQUI_O_ID_DA_MUSICA" 
+                    width="100%" 
+                    height="152" 
+                    frameBorder="0" 
+                    allow="encrypted-media">
+                </iframe>
             </div>
         </div>
-    </div>
+    </section>
 
 </body>
 </html>
