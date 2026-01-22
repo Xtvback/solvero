@@ -6,115 +6,139 @@
     <title>Solvero, Arquivo Musical</title>
     <style>
         :root {
-            --bg-color: #121212,
-            --card-bg: #1e1e1e,
-            --text-primary: #ffffff,
-            --text-secondary: #b3b3b3,
-            --spotify-green: #1DB954,
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-primary: #ffffff;
+            --text-secondary: #b3b3b3;
+            --spotify-green: #1DB954;
         }
 
         body { 
-            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
-            background-color: #121212, 
-            color: #ffffff,
-            margin: 0,
-            padding: 20px,
-            line-height: 1.5,
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color); 
+            color: var(--text-primary);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.5;
         }
 
         header {
-            text-align: center,
-            padding: 40px 0 60px,
-            max-width: 800px,
-            margin: 0 auto,
+            text-align: center;
+            padding: 40px 0 60px;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         h1 { 
-            font-size: 3.5em, 
-            margin: 0, 
-            letter-spacing: 2px,
-            text-transform: uppercase,
+            font-size: 3.5em; 
+            margin: 0; 
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
         .creator-credit { 
-            color: #b3b3b3,
-            font-size: 1.1em,
-            margin-top: 10px,
-            font-weight: 300,
+            color: var(--text-secondary);
+            font-size: 1.1em;
+            margin-top: 10px;
+            font-weight: 300;
         }
 
         .project-grid {
-            display: grid,
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)),
-            gap: 40px,
-            max-width: 1200px,
-            margin: 0 auto,
-            padding-bottom: 60px,
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-bottom: 60px;
         }
 
         .project-card {
-            background-color: #1e1e1e,
-            border-radius: 16px,
-            overflow: hidden,
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2),
-            transition: transform 0.3s ease,
-            display: flex,
-            flex-direction: column,
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
 
         .project-card:hover {
-            transform: translateY(-5px),
+            transform: translateY(-5px);
         }
 
         .image-container {
-            width: 100%,
-            height: 250px,
-            background-color: #000,
-            display: flex,
-            align-items: center,
-            justify-content: center,
-            border-bottom: 2px solid #333,
+            width: 100%;
+            height: 250px;
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid #333;
         }
 
         .card-image {
-            max-width: 100%,
-            max-height: 100%,
-            object-fit: contain,
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
         }
 
         .card-content {
-            padding: 25px,
-            text-align: center,
-            flex-grow: 1,
-            display: flex,
-            flex-direction: column,
-            justify-content: space-between,
+            padding: 25px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .project-name {
-            font-size: 1.6em,
-            margin: 10px 0,
-            color: #ffffff,
+            font-size: 1.6em;
+            margin: 10px 0;
+            color: var(--text-primary);
         }
 
         .track-info {
-            color: #b3b3b3,
-            margin: 5px 0 20px,
-            font-size: 0.95em,
+            color: var(--text-secondary);
+            margin: 5px 0 15px;
+            font-size: 0.95em;
+        }
+
+        .tracklist {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .track-link {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.85em;
+            padding: 8px 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 6px;
+            transition: background 0.2s, color 0.2s;
+            border-left: 3px solid var(--spotify-green);
+        }
+
+        .track-link:hover {
+            background: rgba(29, 185, 84, 0.15);
+            color: var(--spotify-green);
         }
 
         .spotify-btn {
-            display: inline-block, 
-            padding: 12px 30px, 
-            background-color: #1DB954, 
-            color: white, 
-            text-decoration: none, 
-            border-radius: 30px, 
-            font-weight: 700,
-            letter-spacing: 0.5px,
+            display: inline-block; 
+            margin-top: 20px;
+            padding: 12px 30px; 
+            background-color: var(--spotify-green); 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 30px; 
+            font-weight: 700;
+            letter-spacing: 0.5px;
         }
 
-        .spotify-btn:hover { background-color: #1ed760, }
+        .spotify-btn:hover { background-color: #1ed760; }
     </style>
 </head>
 <body>
@@ -131,10 +155,8 @@
                 <img src="https://8upload.com/image/59dd0b5579ca888d/Capa.png" alt="Capa Luna Reign" class="card-image">
             </div>
             <div class="card-content">
-                <div>
-                    <h2 class="project-name">Luna Reign</h2>
-                    <p class="track-info">Música: Daughter Of The Silent Storm</p>
-                </div>
+                <h2 class="project-name">Luna Reign</h2>
+                <p class="track-info">Música: Daughter Of The Silent Storm</p>
                 <a href="https://open.spotify.com/intl-pt/track/3moXBYrPafKc09iDvKFbic?si=df637d0fd3a44a53" target="_blank" class="spotify-btn">Ouvir no Spotify</a>
             </div>
         </article>
@@ -144,11 +166,20 @@
                 <img src="https://8upload.com/image/7ae1cb2e609fc577/Capa.jpg" alt="Capa Echo Vixen I" class="card-image">
             </div>
             <div class="card-content">
-                <div>
-                    <h2 class="project-name">Echo Vixen</h2>
-                    <p class="track-info">Álbum: Primeiro Álbum<br>Música: Tu voas mais que o fado</p>
+                <h2 class="project-name">Echo Vixen</h2>
+                <p class="track-info">Álbum: Primeiro Álbum</p>
+                <div class="tracklist">
+                    <a href="https://open.spotify.com/intl-pt/track/6QQYSeFQlDhRwbDHPbaT2U?si=d01ad4a688f14336" target="_blank" class="track-link">001, Tu voas mais que o fado</a>
+                    <a href="https://open.spotify.com/intl-pt/track/1KmxuYpwSxY5K0kBp9ESJU?si=01a7111f321d4072" target="_blank" class="track-link">002, Levas-me contigo</a>
+                    <a href="https://open.spotify.com/intl-pt/track/068LIZNM2ftzEZl2rMPMOI?si=b3913291f7b74e16" target="_blank" class="track-link">003, A Luz do Sorriso</a>
+                    <a href="https://open.spotify.com/intl-pt/track/0Xs5vacAnR0Pp4eDhPQxGL?si=17b5642a20bf4554" target="_blank" class="track-link">004, Sétima Chave</a>
+                    <a href="https://open.spotify.com/intl-pt/track/2Aza7DE7fqhwtj36YT0eMF?si=82733b15d8fa475c" target="_blank" class="track-link">005, Este Silêncio é o País</a>
+                    <a href="https://open.spotify.com/intl-pt/track/3R3NZcTvzrnxSkn0sVWej6?si=fe7301b380274e45" target="_blank" class="track-link">006, Tira o Mute, Portugal</a>
+                    <a href="https://open.spotify.com/intl-pt/track/0f2cVRGy7mqwjqKCM6S5Sz?si=9abd8697a904442f" target="_blank" class="track-link">007, A Idade É Só Um Número</a>
+                    <a href="https://open.spotify.com/intl-pt/track/51diX9T8BrTQYmuYdsCWao?si=a0dcd7ff57aa4da4" target="_blank" class="track-link">008, O Meu Ponto de Equilíbrio</a>
+                    <a href="https://open.spotify.com/intl-pt/track/2hU5fCGBvlmS84rphaGLCt?si=81478a7444204421" target="_blank" class="track-link">009, O Último Frame</a>
+                    <a href="https://open.spotify.com/intl-pt/track/1KmxuYpwSxY5K0kBp9ESJ" target="_blank" class="track-link">010, A Hora Da Verdade</a>
                 </div>
-                <a href="https://open.spotify.com/intl-pt/track/6QQYSeFQlDhRwbDHPbaT2U?si=d01ad4a688f14336" target="_blank" class="spotify-btn">Ouvir no Spotify</a>
             </div>
         </article>
 
@@ -157,10 +188,8 @@
                 <img src="https://8upload.com/image/3f2c55bec3730b66/Capa2.jpg" alt="Capa Echo Vixen II" class="card-image">
             </div>
             <div class="card-content">
-                <div>
-                    <h2 class="project-name">Echo Vixen</h2>
-                    <p class="track-info">Álbum: Atrás do Palco II<br>Música: Atrás do Palco</p>
-                </div>
+                <h2 class="project-name">Echo Vixen</h2>
+                <p class="track-info">Álbum: Atrás do Palco II<br>Música: Atrás do Palco</p>
                 <a href="https://open.spotify.com/intl-pt/track/0MVns61zt5ZdaAMCWFpWSg?si=2a3323dafafd4eaa" target="_blank" class="spotify-btn">Ouvir no Spotify</a>
             </div>
         </article>
@@ -170,10 +199,8 @@
                 <img src="https://8upload.com/image/0579a0653e705614/Imagem_PNG.png" alt="Capa Atlântico Lusitano" class="card-image">
             </div>
             <div class="card-content">
-                <div>
-                    <h2 class="project-name">Atlântico Lusitano</h2>
-                    <p class="track-info">Música: A Tua Obra</p>
-                </div>
+                <h2 class="project-name">Atlântico Lusitano</h2>
+                <p class="track-info">Música: A Tua Obra</p>
                 <a href="https://open.spotify.com/intl-pt/track/32EET5d5xfMRlVtLE9qw2B?si=742955bfa50e49d3" target="_blank" class="spotify-btn">Ouvir no Spotify</a>
             </div>
         </article>
@@ -183,10 +210,8 @@
                 <img src="https://8upload.com/image/02671fd53f6f5fdd/Capa.png" alt="Capa Aura Do Tempo" class="card-image">
             </div>
             <div class="card-content">
-                <div>
-                    <h2 class="project-name">Aura Do Tempo</h2>
-                    <p class="track-info">Música: A Condena Do Silêncio</p>
-                </div>
+                <h2 class="project-name">Aura Do Tempo</h2>
+                <p class="track-info">Música: A Condena Do Silêncio</p>
                 <a href="https://open.spotify.com/intl-pt/track/44wM3BkByEMkXp3IWWpLO8?si=798da94c768842e1" target="_blank" class="spotify-btn">Ouvir no Spotify</a>
             </div>
         </article>
@@ -196,10 +221,8 @@
                 <img src="https://8upload.com/image/e116149b49bb0cf9/Capa.png" alt="Capa Cosmic Pulse" class="card-image">
             </div>
             <div class="card-content">
-                <div>
-                    <h2 class="project-name">Cosmic Pulse</h2>
-                    <p class="track-info">Música: Unbreakable Dawn</p>
-                </div>
+                <h2 class="project-name">Cosmic Pulse</h2>
+                <p class="track-info">Música: Unbreakable Dawn</p>
                 <a href="https://open.spotify.com/intl-pt/track/1E7OUqN9t4K4eInBO80On6?si=b130d86601b64203" target="_blank" class="spotify-btn">Ouvir no Spotify</a>
             </div>
         </article>
@@ -209,10 +232,8 @@
                 <img src="https://8upload.com/image/7b4564075ba88be2/Capa.png" alt="Capa Vaken" class="card-image">
             </div>
             <div class="card-content">
-                <div>
-                    <h2 class="project-name">Vaken</h2>
-                    <p class="track-info">Música: The Golden Hour Wait</p>
-                </div>
+                <h2 class="project-name">Vaken</h2>
+                <p class="track-info">Música: The Golden Hour Wait</p>
                 <a href="https://open.spotify.com/intl-pt/track/0r4bi4bWDhohUFfvwUYDky?si=83836e7a8b1f4019" target="_blank" class="spotify-btn">Ouvir no Spotify</a>
             </div>
         </article>
@@ -222,10 +243,8 @@
                 <img src="https://8upload.com/image/59c33dc085978dd4/Capa.jpg" alt="Capa Dosis Perfecta" class="card-image">
             </div>
             <div class="card-content">
-                <div>
-                    <h2 class="project-name">Dosis Perfecta</h2>
-                    <p class="track-info">Música: Pura Dinamita</p>
-                </div>
+                <h2 class="project-name">Dosis Perfecta</h2>
+                <p class="track-info">Música: Pura Dinamita</p>
                 <a href="https://open.spotify.com/intl-pt/track/4d6UOVPzbzguzTmY7AEfVf?si=f4af754f088a437a" target="_blank" class="spotify-btn">Ouvir no Spotify</a>
             </div>
         </article>
@@ -235,10 +254,8 @@
                 <img src="https://8upload.com/image/39553deb24b16805/Capa.png" alt="Capa The Midnight Oilmen" class="card-image">
             </div>
             <div class="card-content">
-                <div>
-                    <h2 class="project-name">The Midnight Oilmen</h2>
-                    <p class="track-info">Música: The Song We Owe Them</p>
-                </div>
+                <h2 class="project-name">The Midnight Oilmen</h2>
+                <p class="track-info">Música: The Song We Owe Them</p>
                 <a href="https://open.spotify.com/intl-pt/track/0YNGr1zITGajl2eOSAN42Z?si=521d8b986663440d" target="_blank" class="spotify-btn">Ouvir no Spotify</a>
             </div>
         </article>
@@ -248,10 +265,8 @@
                 <img src="https://8upload.com/image/cce4042a37abd32e/Capa.jpg" alt="Capa Three Thresholds" class="card-image">
             </div>
             <div class="card-content">
-                <div>
-                    <h2 class="project-name">Three Thresholds</h2>
-                    <p class="track-info">Música: Still Believing</p>
-                </div>
+                <h2 class="project-name">Three Thresholds</h2>
+                <p class="track-info">Música: Still Believing</p>
                 <a href="https://open.spotify.com/intl-pt/track/5DlH9gFa37YCXVbyBWMwna?si=855f1b6f3ee94beb" target="_blank" class="spotify-btn">Ouvir no Spotify</a>
             </div>
         </article>
@@ -261,10 +276,8 @@
                 <img src="https://8upload.com/image/fe8d34992d7f7910/Capa.jpg" alt="Capa Project Null" class="card-image">
             </div>
             <div class="card-content">
-                <div>
-                    <h2 class="project-name">Project Null</h2>
-                    <p class="track-info">Música: The Broken Compass</p>
-                </div>
+                <h2 class="project-name">Project Null</h2>
+                <p class="track-info">Música: The Broken Compass</p>
                 <a href="https://open.spotify.com/intl-pt/track/7iC1H5jqM5lx9weRSwLjtz?si=d97719b12cc045ce" target="_blank" class="spotify-btn">Ouvir no Spotify</a>
             </div>
         </article>
@@ -274,10 +287,8 @@
                 <img src="https://8upload.com/image/67b53acc6d4de591/Capa_de___lbum_5.png" alt="Capa Solvero" class="card-image">
             </div>
             <div class="card-content">
-                <div>
-                    <h2 class="project-name">Solvero</h2>
-                    <p class="track-info">Álbum: Código Poético<br>Música: Honra e Caminho</p>
-                </div>
+                <h2 class="project-name">Solvero</h2>
+                <p class="track-info">Álbum: Código Poético<br>Música: Honra e Caminho</p>
                 <a href="https://open.spotify.com/intl-pt/track/6xbaZC8Rcl6Ou1iHmtd4aW?si=90e74f101eff42b8" target="_blank" class="spotify-btn">Ouvir no Spotify</a>
             </div>
         </article>
@@ -287,10 +298,8 @@
                 <img src="https://8upload.com/image/98c73b528a425d27/Capa.jpg" alt="Capa A Última Simetria" class="card-image">
             </div>
             <div class="card-content">
-                <div>
-                    <h2 class="project-name">Banda Sonora</h2>
-                    <p class="track-info">Livro: A Última Simetria</p>
-                </div>
+                <h2 class="project-name">Banda Sonora</h2>
+                <p class="track-info">Livro: A Última Simetria</p>
                 <a href="https://open.spotify.com/intl-pt/track/7bX8uuAWHfpkQe3RJbIcir?si=0fb3036e8ab1465c" target="_blank" class="spotify-btn">Ouvir no Spotify</a>
             </div>
         </article>
@@ -300,10 +309,8 @@
                 <img src="https://8upload.com/image/a141bdb6e2039d7a/Capa.png" alt="Capa Natal" class="card-image">
             </div>
             <div class="card-content">
-                <div>
-                    <h2 class="project-name">Natal</h2>
-                    <p class="track-info">Música: A Minha Sorte</p>
-                </div>
+                <h2 class="project-name">Natal</h2>
+                <p class="track-info">Música: A Minha Sorte</p>
                 <a href="https://open.spotify.com/intl-pt/track/10BgVVOvPG6HosSwCfX8RU?si=3edaa3fdd726465d" target="_blank" class="spotify-btn">Ouvir no Spotify</a>
             </div>
         </article>
