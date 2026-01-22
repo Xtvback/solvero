@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <title>As Minhas Músicas</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+        .seccao-banda {
+            margin-bottom: 40px;
+        }
+        .grelha-musicas {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .cartao-musica {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .cartao-musica h3 {
+            margin-top: 0;
+        }
+        .data-lancamento {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="seccao-banda">
+        <h2>Nome da Banda Principal</h2>
+        <div class="grelha-musicas">
+            <div class="cartao-musica">
+                <h3>Nome da Música</h3>
+                <p class="data-lancamento">Lançado em: 22 de Janeiro de 2026</p>
+                <div id="reprodutor-exemplo"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
