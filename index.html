@@ -6,115 +6,115 @@
     <title>Solvero, Arquivo Musical</title>
     <style>
         :root {
-            --bg-color: #121212,
-            --card-bg: #1e1e1e,
-            --text-primary: #ffffff,
-            --text-secondary: #b3b3b3,
-            --spotify-green: #1DB954,
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-primary: #ffffff;
+            --text-secondary: #b3b3b3;
+            --spotify-green: #1DB954;
         }
 
         body { 
-            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
-            background-color: #121212, 
-            color: #ffffff,
-            margin: 0,
-            padding: 20px,
-            line-height: 1.5,
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color); 
+            color: var(--text-primary);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.5;
         }
 
         header {
-            text-align: center,
-            padding: 40px 0 60px,
-            max-width: 800px,
-            margin: 0 auto,
+            text-align: center;
+            padding: 40px 0 60px;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         h1 { 
-            font-size: 3.5em, 
-            margin: 0, 
-            letter-spacing: 2px,
-            text-transform: uppercase,
+            font-size: 3.5em; 
+            margin: 0; 
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
         .creator-credit { 
-            color: #b3b3b3,
-            font-size: 1.1em,
-            margin-top: 10px,
-            font-weight: 300,
+            color: var(--text-secondary);
+            font-size: 1.1em;
+            margin-top: 10px;
+            font-weight: 300;
         }
 
         .project-grid {
-            display: grid,
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)),
-            gap: 40px,
-            max-width: 1200px,
-            margin: 0 auto,
-            padding-bottom: 60px,
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 60px;
         }
 
         .project-card {
-            background-color: #1e1e1e,
-            border-radius: 16px,
-            overflow: hidden,
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2),
-            transition: transform 0.3s ease,
-            display: flex,
-            flex-direction: column,
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
 
         .project-card:hover {
-            transform: translateY(-5px),
+            transform: translateY(-5px);
         }
 
         .image-container {
-            width: 100%,
-            height: 250px,
-            background-color: #000,
-            display: flex,
-            align-items: center,
-            justify-content: center,
-            border-bottom: 2px solid #333,
+            width: 100%;
+            height: 250px;
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid #333;
         }
 
         .card-image {
-            max-width: 100%,
-            max-height: 100%,
-            object-fit: contain,
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
         }
 
         .card-content {
-            padding: 25px,
-            text-align: center,
-            flex-grow: 1,
-            display: flex,
-            flex-direction: column,
-            justify-content: space-between,
+            padding: 25px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .project-name {
-            font-size: 1.6em,
-            margin: 10px 0,
-            color: #ffffff,
+            font-size: 1.6em;
+            margin: 10px 0;
+            color: var(--text-primary);
         }
 
         .track-info {
-            color: #b3b3b3,
-            margin: 5px 0 20px,
-            font-size: 0.95em,
+            color: var(--text-secondary);
+            margin: 5px 0 20px;
+            font-size: 0.95em;
         }
 
         .spotify-btn {
-            display: inline-block, 
-            padding: 12px 30px, 
-            background-color: #1DB954, 
-            color: white, 
-            text-decoration: none, 
-            border-radius: 30px, 
-            font-weight: 700,
-            letter-spacing: 0.5px,
+            display: inline-block; 
+            padding: 12px 30px; 
+            background-color: var(--spotify-green); 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 30px; 
+            font-weight: 700;
+            letter-spacing: 0.5px;
         }
 
-        .spotify-btn:hover { background-color: #1ed760, }
+        .spotify-btn:hover { background-color: #1ed760; }
     </style>
 </head>
 <body>
@@ -227,6 +227,32 @@
                     <p class="track-info">Música: The Song We Owe Them</p>
                 </div>
                 <a href="https://open.spotify.com/intl-pt/track/0YNGr1zITGajl2eOSAN42Z?si=521d8b986663440d" target="_blank" class="spotify-btn">Ouvir no Spotify</a>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <div class="image-container">
+                <img src="https://8upload.com/image/cce4042a37abd32e/Capa.jpg" alt="Capa Three Thresholds" class="card-image">
+            </div>
+            <div class="card-content">
+                <div>
+                    <h2 class="project-name">Three Thresholds</h2>
+                    <p class="track-info">Música: Still Believing</p>
+                </div>
+                <a href="https://open.spotify.com/intl-pt/track/5DlH9gFa37YCXVbyBWMwna?si=855f1b6f3ee94beb" target="_blank" class="spotify-btn">Ouvir no Spotify</a>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <div class="image-container">
+                <img src="https://8upload.com/image/fe8d34992d7f7910/Capa.jpg" alt="Capa Project Null" class="card-image">
+            </div>
+            <div class="card-content">
+                <div>
+                    <h2 class="project-name">Project Null</h2>
+                    <p class="track-info">Música: The Broken Compass</p>
+                </div>
+                <a href="https://open.spotify.com/intl-pt/track/7iC1H5jqM5lx9weRSwLjtz?si=d97719b12cc045ce" target="_blank" class="spotify-btn">Ouvir no Spotify</a>
             </div>
         </article>
 
