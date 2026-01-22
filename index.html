@@ -1,112 +1,66 @@
 <!DOCTYPE html>
-<html lang="pt-pt">
+<html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arquivo Musical</title>
+    <title>Os Meus Projetos Musicais</title>
     <style>
-        body {
-            background-color: #121212;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
+        body { 
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6; 
+            padding: 40px; 
+            background-color: #f9f9f9; 
+            color: #333;
         }
-        header {
-            text-align: center;
-            padding: 40px 0;
+        .content { 
+            max-width: 700px; 
+            margin: auto; 
+            background: white; 
+            padding: 30px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        h1 {
-            color: #1DB954;
-            font-size: 2.5em;
+        h1 { border-bottom: 2px solid #1DB954; padding-bottom: 10px; color: #111; }
+        h2 { color: #1DB954; margin-top: 30px; }
+        .musica { 
+            margin-bottom: 25px; 
+            padding: 15px; 
+            background: #f1f1f1; 
+            border-radius: 8px; 
         }
-        h2 {
-            border-bottom: 2px solid #282828;
-            padding-bottom: 10px;
-            margin-top: 40px;
-            color: #1DB954;
+        .botao { 
+            display: inline-block; 
+            margin-top: 10px; 
+            padding: 10px 20px; 
+            background-color: #1DB954; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 20px; 
+            font-weight: bold; 
         }
-        .grelha_musicas {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 20px;
-        }
-        .cartao_musica {
-            background-color: #181818;
-            border-radius: 10px;
-            padding: 20px;
-            transition: background 0.3s;
-            border: 1px solid #282828;
-        }
-        .cartao_musica:hover {
-            background-color: #282828;
-        }
-        .titulo_musica {
-            font-size: 1.2em;
-            font-weight: bold;
-            margin-bottom: 5px;
-            display: block;
-        }
-        .data_lancamento {
-            color: #b3b3b3;
-            font-size: 0.9em;
-            margin-bottom: 15px;
-            display: block;
-        }
-        .reprodutor_contentor {
-            margin-top: 10px;
-        }
+        .botao:hover { background-color: #1ed760; }
+        p { margin: 5px 0; }
     </style>
 </head>
 <body>
+    <div class="content">
+        <h1>Catálogo Musical</h1>
 
-    <header>
-        <h1>Os Meus Projetos</h1>
-        <p>Explora os últimos lançamentos da banda e sub-bandas</p>
-    </header>
+        <div class="musica">
+            <h2>Sub-banda 005, Daughter Of The Silent Storm</h2>
+            <p><strong>Canção:</strong> Luna Reign</p>
+            <p>Esta é a quinta música desta formação.</p>
+            <a href="https://open.spotify.com/intl-pt/track/3moXBYrPafKc09iDvKFbic?si=df637d0fd3a44a53" target="_blank" class="botao">Ouvir no Spotify</a>
+        </div>
 
-    <div class="seccao_banda">
-        <h2>Luna Reign</h2>
-        <div class="grelha_musicas">
-            <div class="cartao_musica">
-                <span class="titulo_musica">Lançamento Luna Reign</span>
-                <span class="data_lancamento">Lançado em: 22 de Janeiro de 2026</span>
-                <div class="reprodutor_contentor">
-                    <iframe 
-                        style="border-radius:12px" 
-                        src="https://open.spotify.com/intl-pt/track/3moXBYrPafKc09iDvKFbic?si=a8924f30118e4cb7" 
-                        width="100%" 
-                        height="152" 
-                        frameBorder="0" 
-                        allow="encrypted-media"
-                        loading="lazy">
-                    </iframe>
-                </div>
-            </div>
+        <hr>
+
+        <div class="musica">
+            <h2>Sub-banda Echo Vixen</h2>
+            <p><strong>Álbum:</strong> Atrás do Palco II</p>
+            <p><strong>Canção:</strong> 001, Atrás do Palco</p>
+            <p>Esta é a primeira música do segundo álbum.</p>
+            <a href="https://open.spotify.com/intl-pt/track/0MVns61zt5ZdaAMCWFpWSg?si=2a3323dafafd4eaa" target="_blank" class="botao">Ouvir no Spotify</a>
         </div>
     </div>
-
-    <div class="seccao_banda">
-        <h2>Echo Vixen</h2>
-        <div class="grelha_musicas">
-            <div class="cartao_musica">
-                <span class="titulo_musica">Lançamento Echo Vixen</span>
-                <span class="data_lancamento">Lançado em: 22 de Janeiro de 2026</span>
-                <div class="reprodutor_contentor">
-                    <iframe 
-                        style="border-radius:12px" 
-                        src="https://open.spotify.com/intl-pt/track/0MVns61zt5ZdaAMCWFpWSg?si=fb170ce31c4f442c" 
-                        width="100%" 
-                        height="152" 
-                        frameBorder="0" 
-                        allow="encrypted-media"
-                        loading="lazy">
-                    </iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-
 </body>
 </html>
