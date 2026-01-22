@@ -3,67 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>As Minhas Músicas</title>
+    <title>Arquivo Musical</title>
     <style>
         body {
-            background-color: #121212,
-            color: white,
-            font-family: "Segoe UI", Helvetica, Arial, sans-serif,
-            margin: 0,
-            padding: 40px
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
         }
-        h1, h2 {
-            text-align: center,
-            color: #1DB954
+        header {
+            text-align: center;
+            padding: 40px 0;
         }
-        .grelha {
-            display: grid,
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)),
-            gap: 25px,
-            max-width: 1200px,
-            margin: 40px auto
+        h1 {
+            color: #1DB954;
+            font-size: 2.5em;
         }
-        .quadrado-musica {
-            background-color: #181818,
-            padding: 20px,
-            border-radius: 12px,
-            border: 1px solid #282828,
-            text-align: center
+        h2 {
+            border-bottom: 2px solid #282828;
+            padding-bottom: 10px;
+            margin-top: 40px;
+            color: #1DB954;
         }
-        .info-musica h3 {
-            margin: 10px 0 5px 0,
-            font-size: 1.2em
+        .grelha_musicas {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
         }
-        .data {
-            color: #b3b3b3,
-            font-size: 0.85em,
-            margin-bottom: 15px
+        .cartao_musica {
+            background-color: #181818;
+            border-radius: 10px;
+            padding: 20px;
+            transition: background 0.3s;
+            border: 1px solid #282828;
+        }
+        .cartao_musica:hover {
+            background-color: #282828;
+        }
+        .titulo_musica {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .data_lancamento {
+            color: #b3b3b3;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .reprodutor_contentor {
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
 
-    <h1>Portfólio Musical</h1>
+    <header>
+        <h1>Os Meus Projetos</h1>
+        <p>Explora os últimos lançamentos da banda e sub-bandas</p>
+    </header>
 
-    <section>
+    <div class="seccao_banda">
         <h2>Luna Reign</h2>
-        <div class="grelha">
-            <div class="quadrado-musica">
-                <div class="info-musica">
-                    <h3>Nome da Música</h3>
-                    <p class="data">Lançado em: 22 de Janeiro de 2026</p>
+        <div class="grelha_musicas">
+            <div class="cartao_musica">
+                <span class="titulo_musica">Lançamento Luna Reign</span>
+                <span class="data_lancamento">Lançado em: 22 de Janeiro de 2026</span>
+                <div class="reprodutor_contentor">
+                    <iframe 
+                        style="border-radius:12px" 
+                        src="https://open.spotify.com/intl-pt/track/3moXBYrPafKc09iDvKFbic?si=a8924f30118e4cb7" 
+                        width="100%" 
+                        height="152" 
+                        frameBorder="0" 
+                        allow="encrypted-media"
+                        loading="lazy">
+                    </iframe>
                 </div>
-                <iframe 
-                    style="border-radius:12px" 
-                    src="https://open.spotify.com/embed/track/COLOCA_AQUI_O_ID_DA_MUSICA" 
-                    width="100%" 
-                    height="152" 
-                    frameBorder="0" 
-                    allow="encrypted-media">
-                </iframe>
             </div>
         </div>
-    </section>
+    </div>
 
 </body>
 </html>
