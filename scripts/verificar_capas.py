@@ -21,9 +21,9 @@ def valid_signature(path: Path) -> bool:
         head = f.read(16)
     ext = path.suffix.lower()
     if ext == ".png":
-        return head.startswith(b"\\x89PNG\\r\\n\\x1a\\n")
+        return head.startswith(bytes.fromhex('89504e470d0a1a0a'))
     if ext in (".jpg", ".jpeg"):
-        return head.startswith(b"\\xff\\xd8\\xff")
+        return head.startswith(bytes.fromhex('ffd8ff'))
     if ext == ".webp":
         return head.startswith(b"RIFF") and head[8:12] == b"WEBP"
     if ext == ".svg":
