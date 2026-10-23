@@ -141,6 +141,7 @@
         .spotify-btn:hover { background-color: #1ed760; }
     .image-container img{width:100%;height:100%;object-fit:cover} .project-card a:focus-visible{outline:2px solid white;outline-offset:3px}
     .genre-label{color:#dfbc7d;font-weight:700;font-size:.9rem;letter-spacing:.025em;margin:6px 0 5px}.style-description{font-size:.9rem;line-height:1.6;color:#c5c5c5;margin:0 0 16px}.project-card{border:1px solid #ffffff12} .project-card:hover{border-color:#dfbc7d66}
+    .image-container{background:linear-gradient(135deg,#282438,#242a39);position:relative;min-height:250px}.image-container.cover-unavailable:after{content:attr(data-cover);position:absolute;inset:0;display:grid;place-items:center;color:#e2c993;letter-spacing:.08em;font-size:.92rem;font-weight:650}.card-image{display:block}
     </style>
 </head>
 <body>
@@ -153,12 +154,12 @@
 
     <main class="project-grid">
 <article class="project-card">
-<div class="image-container"><img src="https://drive.google.com/thumbnail?id=1T-U8WJsOP8JlPBv9OyXo_STmchOnBMFG&sz=w1200" alt="Static Riot" class="card-image" loading="lazy"></div>
+<div class="image-container"><img src="https://drive.google.com/thumbnail?id=1T-U8WJsOP8JlPBv9OyXo_STmchOnBMFG&sz=w1200" alt="Static Riot" class="card-image" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('cover-unavailable');this.parentNode.setAttribute('data-cover','Capa indisponível')"></div>
 <div class="card-content"><h2 class="project-name">Static Riot</h2><p class="genre-label">Pop-punk • rock alternativo dos anos 2000</p><p class="style-description">Guitarras orgânicas, atitude rebelde e letras introspectivas. Voz feminina original, capaz de alternar delicadeza e explosão emocional.</p><p class="track-info">Identidade inspirada na energia de Let Go e Under My Skin, com voz própria.</p></div></article>
 
         <article class="project-card">
             <div class="image-container">
-                <img src="https://drive.google.com/thumbnail?id=116kHEeOYnEK53s-goZnNYm4nHSBnuoh6&sz=w1200" alt="Capa Luna Reign" class="card-image" loading="lazy" onerror="this.onerror=null;this.src='https://8upload.com/image/59dd0b5579ca888d/Capa.png'">
+                <img src="https://8upload.com/image/59dd0b5579ca888d/Capa.png" alt="Capa Luna Reign" class="card-image" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('cover-unavailable');this.parentNode.setAttribute('data-cover','Capa indisponível')">
             </div>
             <div class="card-content">
                 <h2 class="project-name">Luna Reign</h2>
@@ -171,7 +172,7 @@
 
         <article class="project-card">
             <div class="image-container">
-                <img src="https://8upload.com/image/7ae1cb2e609fc577/Capa.jpg" alt="Capa Echo Vixen I" class="card-image">
+                <img src="https://8upload.com/image/7ae1cb2e609fc577/Capa.jpg" alt="Capa Echo Vixen I" class="card-image" onerror="this.style.display='none';this.parentNode.classList.add('cover-unavailable');this.parentNode.setAttribute('data-cover','Capa indisponível')">
             </div>
             <div class="card-content">
                 <h2 class="project-name">Echo Vixen</h2>
@@ -195,7 +196,7 @@
 
         <article class="project-card">
             <div class="image-container">
-                <img src="https://drive.google.com/thumbnail?id=1jEqujknUqwRMVY86LH9ZpJBdUz_bkoct&sz=w1200" alt="Capa Atlântico Lusitano" class="card-image" loading="lazy" onerror="this.onerror=null;this.src='https://8upload.com/image/0579a0653e705614/Imagem_PNG.png'">
+                <img src="https://8upload.com/image/0579a0653e705614/Imagem_PNG.png" alt="Capa Atlântico Lusitano" class="card-image" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('cover-unavailable');this.parentNode.setAttribute('data-cover','Capa indisponível')">
             </div>
             <div class="card-content">
                 <h2 class="project-name">Atlântico Lusitano</h2>
@@ -215,7 +216,7 @@
 
         <article class="project-card">
             <div class="image-container">
-                <img src="https://drive.google.com/thumbnail?id=1gVld60oLWP0mKzlzn398v02jwuDsVCH3&sz=w1200" alt="Capa Echo Vixen II" class="card-image" loading="lazy" onerror="this.onerror=null;this.src='https://8upload.com/image/3f2c55bec3730b66/Capa2.jpg'">
+                <img src="https://8upload.com/image/3f2c55bec3730b66/Capa2.jpg" alt="Capa Echo Vixen II" class="card-image" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('cover-unavailable');this.parentNode.setAttribute('data-cover','Capa indisponível')">
             </div>
             <div class="card-content">
                 <h2 class="project-name">Echo Vixen</h2>
@@ -228,7 +229,7 @@
 
         <article class="project-card">
             <div class="image-container">
-                <img src="https://drive.google.com/thumbnail?id=1CSBY9P3bU7IqXH9t24G7AvhlYOdxVncB&sz=w1200" alt="Capa Aura Do Tempo" class="card-image" loading="lazy" onerror="this.onerror=null;this.src='https://8upload.com/image/02671fd53f6f5fdd/Capa.png'">
+                <img src="https://8upload.com/image/02671fd53f6f5fdd/Capa.png" alt="Capa Aura Do Tempo" class="card-image" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('cover-unavailable');this.parentNode.setAttribute('data-cover','Capa indisponível')">
             </div>
             <div class="card-content">
                 <h2 class="project-name">Aura Do Tempo</h2>
@@ -241,7 +242,7 @@
 
         <article class="project-card">
             <div class="image-container">
-                <img src="https://drive.google.com/thumbnail?id=1ttMnDTp3l71E5CXC8sxS5kjqV0-Tri47&sz=w1200" alt="Capa Cosmic Pulse" class="card-image" loading="lazy" onerror="this.onerror=null;this.src='https://8upload.com/image/e116149b49bb0cf9/Capa.png'">
+                <img src="https://8upload.com/image/e116149b49bb0cf9/Capa.png" alt="Capa Cosmic Pulse" class="card-image" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('cover-unavailable');this.parentNode.setAttribute('data-cover','Capa indisponível')">
             </div>
             <div class="card-content">
                 <h2 class="project-name">Cosmic Pulse</h2>
@@ -254,7 +255,7 @@
 
         <article class="project-card">
             <div class="image-container">
-                <img src="https://drive.google.com/thumbnail?id=1egQrgGJpUorKIBQB-y36MFThRSCuPANH&sz=w1200" alt="Capa Vaken" class="card-image" loading="lazy" onerror="this.onerror=null;this.src='https://8upload.com/image/7b4564075ba88be2/Capa.png'">
+                <img src="https://8upload.com/image/7b4564075ba88be2/Capa.png" alt="Capa Vaken" class="card-image" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('cover-unavailable');this.parentNode.setAttribute('data-cover','Capa indisponível')">
             </div>
             <div class="card-content">
                 <h2 class="project-name">Vaken</h2>
@@ -267,7 +268,7 @@
 
         <article class="project-card">
             <div class="image-container">
-                <img src="https://drive.google.com/thumbnail?id=1vb0ULur9w14LVziucNRHHOdWJLIIcTOb&sz=w1200" alt="Capa Dosis Perfecta" class="card-image" loading="lazy" onerror="this.onerror=null;this.src='https://8upload.com/image/59c33dc085978dd4/Capa.jpg'">
+                <img src="https://8upload.com/image/59c33dc085978dd4/Capa.jpg" alt="Capa Dosis Perfecta" class="card-image" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('cover-unavailable');this.parentNode.setAttribute('data-cover','Capa indisponível')">
             </div>
             <div class="card-content">
                 <h2 class="project-name">Dosis Perfecta</h2>
@@ -280,7 +281,7 @@
 
         <article class="project-card">
             <div class="image-container">
-                <img src="https://drive.google.com/thumbnail?id=1-dpcWN_yHZONln-k4h_AAr8kwLHb&sz=w1200" alt="Capa The Midnight Oilmen" class="card-image" loading="lazy" onerror="this.onerror=null;this.src='https://8upload.com/image/39553deb24b16805/Capa.png'">
+                <img src="https://8upload.com/image/39553deb24b16805/Capa.png" alt="Capa The Midnight Oilmen" class="card-image" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('cover-unavailable');this.parentNode.setAttribute('data-cover','Capa indisponível')">
             </div>
             <div class="card-content">
                 <h2 class="project-name">The Midnight Oilmen</h2>
@@ -293,7 +294,7 @@
 
         <article class="project-card">
             <div class="image-container">
-                <img src="https://drive.google.com/thumbnail?id=1dZdrQQCsmnqocjTVRVrCZ_BCs8KSz72O&sz=w1200" alt="Capa Three Thresholds" class="card-image" loading="lazy" onerror="this.onerror=null;this.src='https://8upload.com/image/cce4042a37abd32e/Capa.jpg'">
+                <img src="https://8upload.com/image/cce4042a37abd32e/Capa.jpg" alt="Capa Three Thresholds" class="card-image" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('cover-unavailable');this.parentNode.setAttribute('data-cover','Capa indisponível')">
             </div>
             <div class="card-content">
                 <h2 class="project-name">Three Thresholds</h2>
@@ -306,7 +307,7 @@
 
         <article class="project-card">
             <div class="image-container">
-                <img src="https://drive.google.com/thumbnail?id=1mfJhToXsThK1A2aN4DRk4Ypiai-pdbD5&sz=w1200" alt="Capa Project Null" class="card-image" loading="lazy" onerror="this.onerror=null;this.src='https://8upload.com/image/fe8d34992d7f7910/Capa.jpg'">
+                <img src="https://8upload.com/image/fe8d34992d7f7910/Capa.jpg" alt="Capa Project Null" class="card-image" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('cover-unavailable');this.parentNode.setAttribute('data-cover','Capa indisponível')">
             </div>
             <div class="card-content">
                 <h2 class="project-name">Project Null</h2>
@@ -319,7 +320,7 @@
 
         <article class="project-card">
             <div class="image-container">
-                <img src="https://drive.google.com/thumbnail?id=1LTtaPQJl6t6wvGefMoJeeQ75A7dleoFf&sz=w1200" alt="Capa Solvero" class="card-image" loading="lazy" onerror="this.onerror=null;this.src='https://8upload.com/image/67b53acc6d4de591/Capa_de___lbum_5.png'">
+                <img src="https://8upload.com/image/67b53acc6d4de591/Capa_de___lbum_5.png" alt="Capa Solvero" class="card-image" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('cover-unavailable');this.parentNode.setAttribute('data-cover','Capa indisponível')">
             </div>
             <div class="card-content">
                 <h2 class="project-name">Solvero</h2>
@@ -332,7 +333,7 @@
 
         <article class="project-card">
             <div class="image-container">
-                <img src="https://8upload.com/image/98c73b528a425d27/Capa.jpg" alt="Capa A Última Simetria" class="card-image">
+                <img src="https://8upload.com/image/98c73b528a425d27/Capa.jpg" alt="Capa A Última Simetria" class="card-image" onerror="this.style.display='none';this.parentNode.classList.add('cover-unavailable');this.parentNode.setAttribute('data-cover','Capa indisponível')">
             </div>
             <div class="card-content">
                 <h2 class="project-name">Banda Sonora</h2>
@@ -345,7 +346,7 @@
 
         <article class="project-card">
             <div class="image-container">
-                <img src="https://drive.google.com/thumbnail?id=1iIoX84-HYr6gXglqEAZ3a3X7tCLMj6AD&sz=w1200" alt="Capa Natal" class="card-image" loading="lazy" onerror="this.onerror=null;this.src='https://8upload.com/image/a141bdb6e2039d7a/Capa.png'">
+                <img src="https://8upload.com/image/a141bdb6e2039d7a/Capa.png" alt="Capa Natal" class="card-image" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('cover-unavailable');this.parentNode.setAttribute('data-cover','Capa indisponível')">
             </div>
             <div class="card-content">
                 <h2 class="project-name">Natal</h2>
@@ -356,13 +357,13 @@
             </div>
         </article>
 
-      <article class="project-card"><div class="image-container"><img src="https://drive.google.com/thumbnail?id=1bFSFpQ-d2uixYj4J3Em7NDL6T1CNWcns&sz=w1200" alt="Capa Solvero — Alquimia" class="card-image" loading="lazy"></div><div class="card-content"><h2 class="project-name">Solvero</h2>
+      <article class="project-card"><div class="image-container"><img src="https://drive.google.com/thumbnail?id=1bFSFpQ-d2uixYj4J3Em7NDL6T1CNWcns&sz=w1200" alt="Capa Solvero — Alquimia" class="card-image" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('cover-unavailable');this.parentNode.setAttribute('data-cover','Capa indisponível')"></div><div class="card-content"><h2 class="project-name">Solvero</h2>
                 <p class="genre-label">Rap português • fusão com fado</p>
                 <p class="style-description">Rap expressivo em português europeu, guitarra portuguesa e produção urbana contemporânea.</p><p class="track-info">Álbum 2: Alquimia</p><a class="spotify-btn" href="https://drive.google.com/file/d/1bFSFpQ-d2uixYj4J3Em7NDL6T1CNWcns/view" target="_blank" rel="noopener">Ver capa na Drive</a></div></article>
-<article class="project-card"><div class="image-container"><img src="https://drive.google.com/thumbnail?id=1eDC9cdhfgtKO3DaINcGub3N_xntvIdvZ&sz=w1200" alt="Capa Atlântico Lusitano — O Código" class="card-image" loading="lazy"></div><div class="card-content"><h2 class="project-name">Atlântico Lusitano</h2>
+<article class="project-card"><div class="image-container"><img src="https://drive.google.com/thumbnail?id=1eDC9cdhfgtKO3DaINcGub3N_xntvIdvZ&sz=w1200" alt="Capa Atlântico Lusitano — O Código" class="card-image" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('cover-unavailable');this.parentNode.setAttribute('data-cover','Capa indisponível')"></div><div class="card-content"><h2 class="project-name">Atlântico Lusitano</h2>
                 <p class="genre-label">Pop-rock português • raízes lusitanas</p>
                 <p class="style-description">Canções em português, sentimento de pertença e melodias com identidade atlântica.</p><p class="track-info">Álbum 2: O Código</p><a class="spotify-btn" href="https://drive.google.com/file/d/1eDC9cdhfgtKO3DaINcGub3N_xntvIdvZ/view" target="_blank" rel="noopener">Ver capa na Drive</a></div></article>
-<article class="project-card"><div class="image-container"><img src="https://drive.google.com/thumbnail?id=1RRfc8xiWZDoz3pNckIpQkMzHgOl6wWf1&sz=w1200" alt="Capa Dosis Perfecta — Segundo álbum" class="card-image" loading="lazy"></div><div class="card-content"><h2 class="project-name">Dosis Perfecta</h2>
+<article class="project-card"><div class="image-container"><img src="https://drive.google.com/thumbnail?id=1RRfc8xiWZDoz3pNckIpQkMzHgOl6wWf1&sz=w1200" alt="Capa Dosis Perfecta — Segundo álbum" class="card-image" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('cover-unavailable');this.parentNode.setAttribute('data-cover','Capa indisponível')"></div><div class="card-content"><h2 class="project-name">Dosis Perfecta</h2>
                 <p class="genre-label">Pop-rock latino • energia festiva</p>
                 <p class="style-description">Ritmos vivos, refrões diretos e uma personalidade irreverente.</p><p class="track-info">Álbum 2: Segundo álbum</p><a class="spotify-btn" href="https://drive.google.com/file/d/1RRfc8xiWZDoz3pNckIpQkMzHgOl6wWf1/view" target="_blank" rel="noopener">Ver capa na Drive</a></div></article>
     </main>
