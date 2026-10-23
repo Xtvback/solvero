@@ -1,0 +1,14 @@
+name: Verificar capas SOLVERO
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verificar-capas:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validar capas referenciadas no site
+        run: python3 scripts/verificar_capas.py
